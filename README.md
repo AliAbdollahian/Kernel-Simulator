@@ -48,9 +48,11 @@ The simulator generates an output log file (`output.csv`) capturing every state 
 - **`logTransition`**: Logs state transitions to the output file.
 - **`runSimulation`**: Core simulation logic.
 
-## Compilation
-Compile the project using GCC:
-```bash
-gcc -o kernel_simulator main.c my_functions.c -std=c99
+## Running the Program
 
-./kernel_simulator <test_file.csv>
+1. Open Terminal and navigate to the program's directory.
+2. Run the program with a CSV file:
+   ```bash
+   ./my_program input_test1.csv
+3. Ensure the CSV file is in the same directory or provide its full path.
+4. The program will create an output.csv file in the same directory.
