@@ -1,51 +1,36 @@
-# Kernel Simulator
+# Project Overview
 
-This project implements a Kernel Simulator for simulating OS-level process scheduling and analyzing the performance of different scheduling algorithms. The simulator supports process state transitions and logs each transition to an output file.
+This project simulates key concepts of an operating system, including process scheduling and memory management. Assignment 2 expands on the foundation from Assignment 1, where the basic simulation of process scheduling was implemented. In Assignment 2, we introduced and compared three different scheduling algorithms and extended the system's capabilities to manage memory effectively.
 
-## Features
-- Simulates OS kernel-level process state transitions.
-- Tracks states: New, Ready, Running, Waiting, and Terminated.
-- Logs transitions with detailed time-stamped entries.
+## Key Changes from Assignment 1 to Assignment 2
 
-## Input Format
-The simulator accepts a CSV file as input, containing the following fields:
+1. **Introduction of Multiple Scheduling Algorithms:**
+   - In Assignment 1, the simulation only used a basic **First-Come-First-Serve (FCFS)** algorithm to schedule processes.
+   - In Assignment 2, we implemented and compared three scheduling algorithms:
+     - **FCFS:** The classic approach where the first process in the queue is executed first.
+     - **Priority Scheduling:** Processes are executed based on their priority (with higher priority processes being executed first).
+     - **Round Robin (RR):** Each process is given a fixed time slice, rotating between processes.
 
-| Field          | Description                                                   |
-|----------------|---------------------------------------------------------------|
-| `Pid`          | Unique identifier for the process                             |
-| `ArrivalTime`  | Time at which the process enters the system (ms)              |
-| `TotalCPUTime` | Total CPU time required (excluding I/O time)                  |
-| `IOFrequency`  | Frequency of I/O requests (in ms)                             |
-| `IODuration`   | Duration of each I/O operation (in ms)                        |
+   These schedulers were tested with a variety of workloads, and key performance metrics like average turnaround time, average wait time, and throughput were measured and compared.
 
-### Example Input (CSV Format)
+2. **Memory Management Simulations:**
+   - Assignment 1 did not include memory management.
+   - Assignment 2 added simulations involving different **memory partition configurations**, exploring how memory size and allocation impact process execution.
+   - We used the **FCFS** algorithm to allocate processes to memory partitions, analyzing the effects of partition size on memory usage, internal fragmentation, and system performance.
 
+3. **Performance Metrics:**
+   - New metrics were introduced in Assignment 2 to assess the performance of the schedulers and memory management system:
+     - **Average turnaround time** and **wait time** for processes.
+     - **Throughput** of the system, measured by the number of processes completed per unit of time.
+     - **Memory usage efficiency**, focusing on partition sizes, internal fragmentation, and the impact of partition configuration on process waiting times.
 
-## Output
-The simulator generates an output log file (`output.csv`) capturing every state transition:
+4. **Analysis and Conclusion:**
+   - **Process Scheduling:** FCFS proved to be the most efficient in terms of turnaround and wait times, while Round Robin (RR) performed the worst, especially with higher I/O frequencies.
+   - **Memory Management:** The impact of partition sizes on memory efficiency was explored. Smaller partitions led to internal fragmentation and longer wait times for larger processes, while larger partitions improved system throughput but required careful management.
 
-| Field         | Description                           |
-|---------------|---------------------------------------|
-| `Time`        | Simulation time (ms)                 |
-| `Pid`         | Process ID                           |
-| `OldState`    | State before the transition          |
-| `NewState`    | State after the transition           |
+## Conclusion
 
-### Example Output
-
-## Project Structure
-### Files
-1. **`main.c`**: Entry point for the simulator.
-2. **`my_structs.h`**: Defines the PCB and queue structures.
-3. **`my_functions.h`**: Function prototypes for simulator operations.
-4. **`my_functions.c`**: Function implementations for CSV parsing, queue operations, logging, and state transitions.
-
-### Key Functions
-- **`readCSV`**: Reads and parses the input file to initialize processes.
-- **`alloc_queue`**: Allocates memory for a queue.
-- **`enqueue` / `dequeue`**: Handles queue operations.
-- **`logTransition`**: Logs state transitions to the output file.
-- **`runSimulation`**: Core simulation logic.
+This update showcases the progress made in Assignment 2 by introducing more complex algorithms and memory management simulations, compared to the foundational work done in Assignment 1. The additional analysis of performance and memory usage offers a deeper understanding of operating system functions.
 
 ## Running the Program
 
