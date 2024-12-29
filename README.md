@@ -2,10 +2,10 @@
 
 This project implements a Kernel Simulator for simulating OS-level process scheduling and analyzing the performance of different scheduling algorithms. The simulator supports process state transitions and logs each transition to an output file. Assignment 2 expands on the foundation from [Assignment 1](https://github.com/AliAbdollahian/Kernel-Simulator/tree/main/cpu%20scheduling%20simulator), where the basic simulation of process scheduling was implemented. In Assignment 2, we introduced and compared three different scheduling algorithms and extended the system's capabilities to manage memory effectively.
 
-## Key Changes from Assignment 1 to Assignment 2
+## Key Changes from [Assignment 1](https://github.com/AliAbdollahian/Kernel-Simulator/tree/main/cpu%20scheduling%20simulator) to Assignment 2
 
 1. **Introduction of Multiple Scheduling Algorithms:**
-   - In Assignment 1, the simulation only used a basic **First-Come-First-Serve (FCFS)** algorithm to schedule processes.
+   - In [Assignment 1](https://github.com/AliAbdollahian/Kernel-Simulator/tree/main/cpu%20scheduling%20simulator), the simulation only used a basic **First-Come-First-Serve (FCFS)** algorithm to schedule processes.
    - In Assignment 2, we implemented and compared three scheduling algorithms:
      - **FCFS:** The classic approach where the first process in the queue is executed first.
      - **Priority Scheduling:** Processes are executed based on their priority (with higher priority processes being executed first).
@@ -14,7 +14,7 @@ This project implements a Kernel Simulator for simulating OS-level process sched
    These schedulers were tested with a variety of workloads, and key performance metrics like average turnaround time, average wait time, and throughput were measured and compared.
 
 2. **Memory Management Simulations:**
-   - Assignment 1 did not include memory management.
+   - [Assignment 1](https://github.com/AliAbdollahian/Kernel-Simulator/tree/main/cpu%20scheduling%20simulator) did not include memory management.
    - Assignment 2 added simulations involving different **memory partition configurations**, exploring how memory size and allocation impact process execution.
    - We used the **FCFS** algorithm to allocate processes to memory partitions, analyzing the effects of partition size on memory usage, internal fragmentation, and system performance.
 
@@ -30,7 +30,8 @@ This project implements a Kernel Simulator for simulating OS-level process sched
 
 ## Conclusion
 
-This update showcases the progress made in Assignment 2 by introducing more complex algorithms and memory management simulations, compared to the foundational work done in Assignment 1. The additional analysis of performance and memory usage offers a deeper understanding of operating system functions.
+This update showcases the progress made in Assignment 2 by introducing memory management simulations, RR, Priority and FCFS scheduling algorithms, compared to the foundational work done in [Assignment 1](https://github.com/AliAbdollahian/Kernel-Simulator/tree/main/cpu%20scheduling%20simulator). The additional analysis of performance and memory usage was for understanding of operating system functions.
+For more detailed information, including results and analysis, please refer to the [report](https://github.com/AliAbdollahian/Kernel-Simulator/blob/main/SYSC4001-A2.pdf).
 
 ## Running the Program
 
