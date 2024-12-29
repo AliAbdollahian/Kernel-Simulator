@@ -1,37 +1,35 @@
 # Project Overview
 
-This project implements a Kernel Simulator for simulating OS-level process scheduling and analyzing the performance of different scheduling algorithms. The simulator supports process state transitions and logs each transition to an output file. Assignment 2 expands on the foundation from [Assignment 1](https://github.com/AliAbdollahian/Kernel-Simulator/tree/main/cpu%20scheduling%20simulator), where the basic simulation of process scheduling was implemented. In Assignment 2, we introduced and compared three different scheduling algorithms and extended the system's capabilities to manage memory effectively.
+This project implements a Kernel Simulator to simulate OS-level process scheduling and analyze the performance of different scheduling algorithms. The simulator supports process state transitions and logs each transition to an output file. Assignment 2 expands on [Assignment 1](https://github.com/AliAbdollahian/Kernel-Simulator/tree/main/cpu%20scheduling%20simulator), where basic process scheduling was implemented. In Assignment 2, we introduced and compared three scheduling algorithms and extended the system's memory management capabilities.
 
 ## Key Changes from [Assignment 1](https://github.com/AliAbdollahian/Kernel-Simulator/tree/main/cpu%20scheduling%20simulator) to Assignment 2
 
-1. **Introduction of Multiple Scheduling Algorithms:**
-   - In [Assignment 1](https://github.com/AliAbdollahian/Kernel-Simulator/tree/main/cpu%20scheduling%20simulator), the simulation only used a basic **First-Come-First-Serve (FCFS)** algorithm to schedule processes.
-   - In Assignment 2, we implemented and compared three scheduling algorithms:
-     - **FCFS:** The classic approach where the first process in the queue is executed first.
-     - **Priority Scheduling:** Processes are executed based on their priority (with higher priority processes being executed first).
-     - **Round Robin (RR):** Each process is given a fixed time slice, rotating between processes.
+1. **Scheduling Algorithms:**
+   - [Assignment 1](https://github.com/AliAbdollahian/Kernel-Simulator/tree/main/cpu%20scheduling%20simulator) used a basic **First-Come-First-Serve (FCFS)** algorithm.
+   - Assignment 2 introduced and compared:
+     - **FCFS:** Executes processes in the order they arrive.
+     - **Priority Scheduling:** Executes based on process priority (higher priority first).
+     - **Round Robin (RR):** Allocates a fixed time slice to each process in a cyclic order.
 
-   These schedulers were tested with a variety of workloads, and key performance metrics like average turnaround time, average wait time, and throughput were measured and compared.
+   We measured and compared performance metrics like average turnaround time, wait time, and throughput.
 
 2. **Memory Management Simulations:**
    - [Assignment 1](https://github.com/AliAbdollahian/Kernel-Simulator/tree/main/cpu%20scheduling%20simulator) did not include memory management.
-   - Assignment 2 added simulations involving different **memory partition configurations**, exploring how memory size and allocation impact process execution.
-   - We used the **FCFS** algorithm to allocate processes to memory partitions, analyzing the effects of partition size on memory usage, internal fragmentation, and system performance.
+   - Assignment 2 added memory management simulations with different **memory partition configurations**, exploring how partition size affects memory usage, fragmentation, and process performance.
 
 3. **Performance Metrics:**
-   - New metrics were introduced in Assignment 2 to assess the performance of the schedulers and memory management system:
-     - **Average turnaround time** and **wait time** for processes.
-     - **Throughput** of the system, measured by the number of processes completed per unit of time.
-     - **Memory usage efficiency**, focusing on partition sizes, internal fragmentation, and the impact of partition configuration on process waiting times.
+   - New metrics introduced in Assignment 2:
+     - **Average turnaround time** and **wait time**.
+     - **Throughput**, measuring processes completed per unit time.
+     - **Memory usage efficiency**, focusing on partition sizes and fragmentation.
 
 4. **Analysis and Conclusion:**
-   - **Process Scheduling:** FCFS proved to be the most efficient in terms of turnaround and wait times, while Round Robin (RR) performed the worst, especially with higher I/O frequencies.
-   - **Memory Management:** The impact of partition sizes on memory efficiency was explored. Smaller partitions led to internal fragmentation and longer wait times for larger processes, while larger partitions improved system throughput but required careful management.
+   - **Scheduling:** FCFS was most efficient in turnaround and wait times, while Round Robin (RR) performed the worst, especially with higher I/O frequencies.
+   - **Memory Management:** Smaller partitions caused fragmentation and increased wait times for larger processes, while larger partitions improved throughput but needed careful management.
 
 ## Conclusion
 
-This update showcases the progress made in Assignment 2 by introducing memory management simulations, RR, Priority and FCFS scheduling algorithms, compared to the foundational work done in [Assignment 1](https://github.com/AliAbdollahian/Kernel-Simulator/tree/main/cpu%20scheduling%20simulator). The additional analysis of performance and memory usage was for understanding of operating system functions.
-For more detailed information, including results and analysis, please refer to the [report](https://github.com/AliAbdollahian/Kernel-Simulator/blob/main/SYSC4001-A2.pdf).
+This update in Assignment 2 builds on the work from [Assignment 1](https://github.com/AliAbdollahian/Kernel-Simulator/tree/main/cpu%20scheduling%20simulator) by adding memory management simulations and comparing RR, Priority, and FCFS algorithms. The analysis helps understand operating system functions and their impact on performance. For detailed results and analysis, refer to the [report](https://github.com/AliAbdollahian/Kernel-Simulator/blob/main/SYSC4001-A2.pdf).
 
 ## Running the Program
 
@@ -39,5 +37,3 @@ For more detailed information, including results and analysis, please refer to t
 2. Run the program with a CSV file:
    ```bash
    ./my_program input_test1.csv
-3. Ensure the CSV file is in the same directory or provide its full path.
-4. The program will create an output.csv file in the same directory.
