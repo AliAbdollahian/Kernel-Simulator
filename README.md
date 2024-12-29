@@ -1,6 +1,6 @@
 # Project Overview
 
-This project implements a Kernel Simulator for simulating OS-level process scheduling and analyzing the performance of different scheduling algorithms. The simulator supports process state transitions and logs each transition to an output file. Assignment 2 expands on the foundation from [Assignment 1]([cpu scheduling simulator](https://github.com/AliAbdollahian/Kernel-Simulator/tree/main/cpu%20scheduling%20simulator)), where the basic simulation of process scheduling was implemented. In Assignment 2, we introduced and compared three different scheduling algorithms and extended the system's capabilities to manage memory effectively.
+This project implements a Kernel Simulator for simulating OS-level process scheduling and analyzing the performance of different scheduling algorithms. The simulator supports process state transitions and logs each transition to an output file. Assignment 2 expands on the foundation from [Assignment 1](https://github.com/AliAbdollahian/Kernel-Simulator/tree/main/cpu%20scheduling%20simulator), where the basic simulation of process scheduling was implemented. In Assignment 2, we introduced and compared three different scheduling algorithms and extended the system's capabilities to manage memory effectively.
 
 ## Key Changes from Assignment 1 to Assignment 2
 
