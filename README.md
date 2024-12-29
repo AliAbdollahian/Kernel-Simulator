@@ -5,7 +5,6 @@ This project implements a Kernel Simulator for simulating OS-level process sched
 ## Features
 - Simulates OS kernel-level process state transitions.
 - Tracks states: New, Ready, Running, Waiting, and Terminated.
-- Handles processes with I/O events and preemption.
 - Logs transitions with detailed time-stamped entries.
 
 ## Input Format
