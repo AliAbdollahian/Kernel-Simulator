@@ -1,6 +1,6 @@
 # Kernel Simulator
 
-This project implements a Kernel Simulator for simulating OS-level process scheduling and analyzing the performance of different scheduling algorithms. The simulator supports process state transitions and logs each transition to an output file. It will also serve as the foundation for further development in Assignment 2.
+This project implements a Kernel Simulator for simulating OS-level process scheduling and analyzing the performance of different scheduling algorithms. The simulator supports process state transitions and logs each transition to an output file.
 
 ## Features
 - Simulates OS kernel-level process state transitions.
